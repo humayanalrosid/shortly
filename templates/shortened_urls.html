@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block page %} Shortened Urls - Shortly {% endblock %}
+
+{% block content %}
+
+<div class="row d-flex justify-content-center align-items-center" style="height: 83vh;">
+    <div class="col-md-10 mt-5">
+        <div class="text-center mb-4">
+            <h2 class="fw-bold">Shortened URLs</h2>
+        </div>
+
+        {% if urls %}
+            <div class="mb-4">
+                <h6 class="text-muted">You have <strong>{{ urls|length }}</strong> shortened URLs</h6>
+            </div>
+            {% for url in urls %}
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">{{ url.title }}</h5>
+                        <p class="card-text">
+                            <a id="short_link" href="{{ request.host_url }}{{ url.random_string }}" class="text-decoration-none">{{ request.host_url }}{{ url.random_string }}</a>
+                        </p>
+                        <button class="btn btn-primary btn-sm" data-clipboard-text="{{ request.host_url }}{{ url.random_string }}">Copy</button>
+                    </div>
+                </div>
+            {% endfor %}
+        {% else %}
+            <div class="text-center">
+                <h6 class="fw-bold">No shortened URLs yet!</h6>
+            </div>
+        {% endif %}
+
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block page %} Page Not Found - Shortly {% endblock %}
+
+{% block content %}
+
+<div class="row d-flex justify-content-center align-items-center" style="height: 83vh;">
+    <div class="col-md-6">
+        <div class="text-center mb-3">
+            <h2 class="fw-bold">Page Not Found</h2>
+        </div>
+
+        <div class="text-center">
+            <p>Sorry, the page you are looking for does not exist.</p>
+
+            <!-- button group -->
+            <div>
+                <a href="{{ url_for('routes.home') }}" class="btn btn-sm btn-primary">
+                    Go to Home
+                </a>
+
+                <a href="{{ url_for('routes.login') }}" class="btn btn-sm btn-outline-primary">
+                    Login
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
