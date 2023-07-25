@@ -4,13 +4,9 @@ Shortly is a simple and efficient Flask URL shortener web application that allow
 
 ## Features
 
-- **URL Shortening**: Convert long URLs into short, easy-to-share links.
-- **Custom Short URLs**: Optionally customize the generated short URLs.
-- **Link Expiration**: Set an expiration date for short URLs, making them valid only for a limited time.
-- **Analytics Dashboard**: Track the number of clicks and other statistics for each short URL.
-- **RESTful API**: Integrate Shortly's functionality into your own applications with the API endpoints.
-- **User Authentication**: Register and log in to manage your shortened URLs.
-- **Admin Panel**: Admin dashboard to monitor and manage the system.
+- **User Authentication:** Users can register and log in to the Shortly web app, ensuring their URLs are securely managed and accessible only to them.
+- **URL Shortening:** Registered users can easily shorten long URLs into short, user-friendly links. The shortened URLs will redirect to the original long URLs.
+- **Previous URLs History:** Users can view a history of previously shortened URLs, enabling them to manage and keep track of their shortened links.
 
 ## Demo
 
@@ -68,7 +64,6 @@ Visit http://localhost:5000 in your web browser to access Shortly.
 ## Usage
 - Register and log in to Shortly using your credentials.
 - On the dashboard, paste the long URL you want to shorten.
-- Optionally, customize the short URL or set an expiration date.
 - Click the "Shorten" button to generate the short URL.
 - You can view and manage your shortened URLs in the dashboard.
 - Use the short URL to redirect to the original long URL.
